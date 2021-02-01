@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.BookLibrary.Base" parent="Theme.BookLibrary"/>
 
-    <style name="Theme.BookLibrary" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.BookLibrary" parent="Theme.MaterialComponents.Light">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/green_500</item>
         <item name="colorPrimaryVariant">@color/green_700</item>
@@ -14,25 +14,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-
-    </style>
-
-    <style name="TextAppearance.BookLibrary.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
-        <item name="textAllCaps">false</item>
-        <item name="fontFamily">@font/roboto_light</item>
-        <item name="android:textColor">?attr/hintTextColor</item>
-    </style>
-    <style name="TextAppearance.BookLibrary.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
-        <item name="fontFamily">@font/roboto_light</item>
-    </style>
-    <style name="TextAppearance.BookLibrary.Body1" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="fontFamily">@font/droid_serif</item>
-    </style>
-    <style name="TextAppearance.BookLibrary.Body2" parent="TextAppearance.MaterialComponents.Body2">
-        <item name="fontFamily">@font/droid_serif</item>
-    </style>
-    <style name="TextAppearance.BookLibrary.Overline" parent="TextAppearance.MaterialComponents.Overline">
-        <item name="fontFamily">@font/roboto_light</item>
     </style>
 
 </resources>

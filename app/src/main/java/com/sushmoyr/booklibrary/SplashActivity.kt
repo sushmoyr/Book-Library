@@ -6,11 +6,9 @@ import android.os.Handler
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.lifecycleScope
 import com.sushmoyr.booklibrary.databinding.ActivitySplashBinding
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 
 class SplashActivity : AppCompatActivity() {
@@ -22,6 +20,8 @@ class SplashActivity : AppCompatActivity() {
         supportActionBar?.hide()
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         val window: Window = this.window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)

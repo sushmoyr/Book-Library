@@ -3,4 +3,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="description">A description about the book</string>
+    <string name="book_name">Book Name</string>
+    <string name="author_name">Author Name</string>
+    <string name="genre">Genre</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="sort_by">Sort By</string>
+    <string name="search">Search</string>
+    <string name="name_a_z">Name A-Z</string>
+    <string name="name_z_a">Name Z-A</string>
+    <string name="newest_first">Newest First</string>
+    <string name="oldest_first">Oldest First</string>
+    <string name="delete_all">Delete All</string>
 </resources>

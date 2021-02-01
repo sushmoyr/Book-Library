@@ -1,8 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.BookLibrary.Base" parent="Theme.BookLibrary"/>
 
-    <style name="Theme.BookLibrary" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.BookLibrary" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/green_500</item>
         <item name="colorPrimaryVariant">@color/green_700</item>
@@ -14,7 +13,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="actionBarSize">48dp</item>
+        <item name="android:forceDarkAllowed">false</item>
     </style>
-
 </resources>
