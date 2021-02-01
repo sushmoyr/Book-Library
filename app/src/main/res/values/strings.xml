@@ -2,4 +2,5 @@
     <string name="app_name">Book Library</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">A description about the book</string>
 </resources>
