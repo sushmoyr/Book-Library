@@ -2,7 +2,7 @@
     <string name="app_name">Book Library</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="description">A description about the book</string>
+    <string name="description">Description</string>
     <string name="book_name">Book Name</string>
     <string name="author_name">Author Name</string>
     <string name="genre">Genre</string>
@@ -15,4 +15,10 @@
     <string name="newest_first">Newest First</string>
     <string name="oldest_first">Oldest First</string>
     <string name="delete_all">Delete All</string>
+    <string name="quantity_dummy_text">Quantity: 16</string>
+    <string name="price_dummy_text">Price: 120$</string>
+    <string name="description_dummy_text">It\'s just a long description of text that I myself also don\'t know what is written here. I just wrote a bunch of stupid sentences just to fill up the space and nothing else.</string>
+    <string name="author_dummy_text">John Doe Original</string>
+    <string name="title_dummy_text">The name of the book is so big that I can\'t handle</string>
+    <string name="content_desc_img">The Cover Page of the Book</string>
 </resources>

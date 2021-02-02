@@ -1,9 +1,10 @@
-package com.sushmoyr.booklibrary
+package com.sushmoyr.booklibrary.fragments
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.sushmoyr.booklibrary.R
 import com.sushmoyr.booklibrary.databinding.FragmentViewBinding
 
 class ViewFragment : Fragment() {

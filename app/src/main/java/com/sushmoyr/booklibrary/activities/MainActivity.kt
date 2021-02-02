@@ -1,4 +1,4 @@
-package com.sushmoyr.booklibrary
+package com.sushmoyr.booklibrary.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
@@ -9,6 +9,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.sushmoyr.booklibrary.R
 
 class MainActivity : AppCompatActivity() {
 

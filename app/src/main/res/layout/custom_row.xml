@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
     android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
     android:layout_marginEnd="4dp"
-    android:elevation="2dp"
-    app:cardElevation="@dimen/cardview_default_elevation">
+    android:layout_marginBottom="4dp"
+    app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,68 +16,68 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/book_cover"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            app:layout_constraintHeight_percent="1"
-            app:layout_constraintWidth_percent="0.3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="1"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.3"
             app:srcCompat="@drawable/ic_placeholder_image" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/book_genre"
             style="@style/TextAppearance.BookLibrary.Overline"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="24dp"
             android:text="Genre: Some Genre"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintBottom_toTopOf="@+id/book_title"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/book_cover"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/book_title"
             style="@style/TextAppearance.BookLibrary.Headline5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Book Title"
-            app:layout_constraintBottom_toTopOf="@+id/textView3"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintBottom_toTopOf="@+id/book_author"
+            app:layout_constraintEnd_toEndOf="@+id/book_genre"
+            app:layout_constraintStart_toStartOf="@+id/book_genre"
+            app:layout_constraintTop_toBottomOf="@+id/book_genre" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/book_author"
             style="@style/TextAppearance.BookLibrary.Subtitle2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
             android:text="Author Name"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintBottom_toTopOf="@+id/book_desc"
+            app:layout_constraintEnd_toEndOf="@+id/book_title"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintStart_toStartOf="@+id/book_title"
+            app:layout_constraintTop_toBottomOf="@+id/book_title" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/book_desc"
+            style="@style/TextAppearance.BookLibrary.Body2"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="@string/description"
-            style="@style/TextAppearance.BookLibrary.Body2"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="@+id/book_author"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/book_author"
+            app:layout_constraintTop_toBottomOf="@+id/book_author"
             app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

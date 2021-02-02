@@ -4,19 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:alpha="1"
     android:background="@color/splash_bg"
-    android:scaleX="1"
-    android:scaleY="1"
-    tools:context=".SplashActivity">
+    tools:context=".activities.SplashActivity">
 
     <ImageView
         android:id="@+id/splash_logo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:alpha="0"
-        android:scaleX="0"
-        android:scaleY="0"
+        android:alpha="1"
+        android:scaleX="1"
+        android:scaleY="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

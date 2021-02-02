@@ -1,4 +1,4 @@
-package com.sushmoyr.booklibrary
+package com.sushmoyr.booklibrary.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
+import com.sushmoyr.booklibrary.R
 import com.sushmoyr.booklibrary.databinding.ActivitySplashBinding
 
 

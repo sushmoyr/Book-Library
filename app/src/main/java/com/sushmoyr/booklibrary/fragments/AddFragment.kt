@@ -1,4 +1,4 @@
-package com.sushmoyr.booklibrary
+package com.sushmoyr.booklibrary.fragments
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.sushmoyr.booklibrary.R
 import com.sushmoyr.booklibrary.database.Book
 import com.sushmoyr.booklibrary.database.BookViewModel
 import com.sushmoyr.booklibrary.databinding.FragmentAddBinding
@@ -80,8 +81,8 @@ class AddFragment : Fragment() {
             authorName = binding.authorName.text.toString()
         }
         //Description
-        if (!TextUtils.isEmpty(binding.description.text.toString())) {
-            description = binding.description.text.toString()
+        if (!TextUtils.isEmpty(binding.descriptionUpdate.text.toString())) {
+            description = binding.descriptionUpdate.text.toString()
         }
         //genre
         if (!TextUtils.isEmpty(binding.genre.text.toString())) {
