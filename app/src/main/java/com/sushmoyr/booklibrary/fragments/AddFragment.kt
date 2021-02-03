@@ -52,7 +52,7 @@ class AddFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
-    fun insertDataToDatabase() {
+    private fun insertDataToDatabase() {
         hasError = false
         val book = getBookData()
         if (!hasError) {

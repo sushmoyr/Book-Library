@@ -21,4 +21,6 @@
     <string name="author_dummy_text">John Doe Original</string>
     <string name="title_dummy_text">The name of the book is so big that I can\'t handle</string>
     <string name="content_desc_img">The Cover Page of the Book</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
 </resources>

@@ -31,10 +31,38 @@ class BookViewModel(application: Application) : AndroidViewModel(application) {
             repository.updateBook(book)
         }
     }
-    fun deleteBook(book:Book)
-    {
+
+    fun deleteBook(book: Book) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteBook(book)
         }
+    }
+
+    fun searchDatabase(searchQuery: String): LiveData<List<Book>> {
+        return repository.searchDatabase(searchQuery)
+
+    }
+
+
+    fun deleteAllBooks() {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAllBooks()
+        }
+    }
+
+    fun nameSortAsc(): LiveData<List<Book>> {
+        return repository.nameSortAsc()
+    }
+
+    fun nameSortDesc(): LiveData<List<Book>> {
+        return repository.nameSortDesc()
+    }
+
+    fun newestSort(): LiveData<List<Book>> {
+        return repository.newestSort()
+    }
+
+    fun oldestSort(): LiveData<List<Book>> {
+        return repository.oldestSort()
     }
 }
