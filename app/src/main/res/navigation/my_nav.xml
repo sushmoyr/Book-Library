@@ -12,14 +12,26 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_addFragment"
-            app:destination="@id/addFragment" />
+            app:destination="@id/addFragment"
+            app:enterAnim="@anim/fade_in_from_right"
+            app:exitAnim="@anim/fade_out_to_left"
+            app:popEnterAnim="@anim/fade_in_from_left"
+            app:popExitAnim="@anim/fade_out_to_right" />
         <action
             android:id="@+id/action_homeFragment_to_viewFragment"
-            app:destination="@id/viewFragment" />
+            app:destination="@id/viewFragment"
+            app:enterAnim="@anim/fade_in_from_right"
+            app:exitAnim="@anim/fade_out_to_left"
+            app:popEnterAnim="@anim/fade_in_from_left"
+            app:popExitAnim="@anim/fade_out_to_right" />
         <action
             android:id="@+id/action_homeFragment_to_updateFragment"
             app:destination="@id/updateFragment"
 
+            app:enterAnim="@anim/fade_in_from_right"
+            app:exitAnim="@anim/fade_out_to_left"
+            app:popEnterAnim="@anim/fade_in_from_left"
+            app:popExitAnim="@anim/fade_out_to_right"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -31,6 +43,10 @@
             android:id="@+id/action_addFragment_to_homeFragment"
             app:destination="@id/homeFragment"
 
+            app:enterAnim="@anim/fade_in_from_left"
+            app:exitAnim="@anim/fade_out_to_right"
+            app:popEnterAnim="@anim/fade_in_from_right"
+            app:popExitAnim="@anim/fade_out_to_left"
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -41,7 +57,11 @@
         tools:layout="@layout/fragment_view">
         <action
             android:id="@+id/action_viewFragment_to_updateFragment"
-            app:destination="@id/updateFragment" />
+            app:destination="@id/updateFragment"
+            app:enterAnim="@anim/fade_in_from_right"
+            app:exitAnim="@anim/fade_out_to_left"
+            app:popEnterAnim="@anim/fade_in_from_left"
+            app:popExitAnim="@anim/fade_out_to_right" />
         <argument
             android:name="BookData"
             app:argType="com.sushmoyr.booklibrary.database.Book" />
@@ -49,6 +69,10 @@
             android:id="@+id/action_viewFragment_to_homeFragment"
             app:destination="@id/homeFragment"
 
+            app:enterAnim="@anim/fade_in_from_left"
+            app:exitAnim="@anim/fade_out_to_right"
+            app:popEnterAnim="@anim/fade_in_from_right"
+            app:popExitAnim="@anim/fade_out_to_left"
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -60,6 +84,10 @@
         <action
             android:id="@+id/action_updateFragment_to_homeFragment"
             app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fade_in_from_left"
+            app:exitAnim="@anim/fade_out_to_right"
+            app:popEnterAnim="@anim/fade_in_from_right"
+            app:popExitAnim="@anim/fade_out_to_left"
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="true" />
         <argument

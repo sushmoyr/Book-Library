@@ -76,7 +76,7 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
 
                 }
                 builder.setTitle("Delete Everything?")
-                builder.setMessage("Are you sure want to delete all data?")
+                builder.setMessage("Are you sure want to delete all data? You won't be able to undo this action.")
                 builder.create().show()
             }
             R.id.name_asc -> {
@@ -93,24 +93,6 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
             }
         }
 
-        /*if (item.itemId == R.id.name_az) {
-            Toast.makeText(requireContext(), "Sorted By Name A to Z", Toast.LENGTH_SHORT).show()
-            //sortDataAsc("name")
-        }
-        if (item.itemId == R.id.name_za) {
-            Toast.makeText(requireContext(), "Sorted By Name Z to A", Toast.LENGTH_SHORT).show()
-            //sortDataDesc("name")
-        }
-
-        if (item.itemId == R.id.newest) {
-            Toast.makeText(requireContext(), "Sorted By newestSort First", Toast.LENGTH_SHORT).show()
-            bookViewModel.sortByIdDesc()
-        }
-
-        if (item.itemId == R.id.oldest) {
-            Toast.makeText(requireContext(), "Sorted By oldestSort First", Toast.LENGTH_SHORT).show()
-            //sortDataAsc("id")
-        }*/
 
         return super.onOptionsItemSelected(item)
     }
@@ -141,7 +123,7 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
         })
     }
 
-    fun nameSortAsc() {
+    private fun nameSortAsc() {
         bookViewModel.nameSortAsc().observe(this, { list ->
             list.let {
                 adapter.setData(it)
@@ -149,7 +131,7 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
         })
     }
 
-    fun nameSortDesc() {
+    private fun nameSortDesc() {
         bookViewModel.nameSortDesc().observe(this, { list ->
             list.let {
                 adapter.setData(it)
@@ -157,7 +139,7 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener {
         })
     }
 
-    fun newestSort() {
+    private fun newestSort() {
         bookViewModel.newestSort().observe(this, { list ->
             list.let {
                 adapter.setData(it)

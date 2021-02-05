@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:contentDescription="@string/content_desc_img"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_placeholder_image"
+        android:src="@drawable/dummy_cover"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="4:6"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.35" />
+        app:layout_constraintWidth_percent="0.4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -65,6 +65,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/author_dummy_text"
+        android:textAppearance="@style/TextAppearance.BookLibrary.Headline6"
         app:layout_constraintBottom_toTopOf="@+id/desc_view"
         app:layout_constraintEnd_toEndOf="@+id/title_view"
         app:layout_constraintHorizontal_bias="0.0"
@@ -93,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/price_dummy_text"
-        android:textAppearance="@style/TextAppearance.BookLibrary.Subtitle2"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
         app:layout_constraintBottom_toTopOf="@+id/quantity_view"
         app:layout_constraintEnd_toEndOf="@+id/desc_view"
         app:layout_constraintHorizontal_bias="0.0"
@@ -108,7 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/quantity_dummy_text"
-        android:textAppearance="@style/TextAppearance.BookLibrary.Subtitle2"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/price_view"
         app:layout_constraintHorizontal_bias="0.0"

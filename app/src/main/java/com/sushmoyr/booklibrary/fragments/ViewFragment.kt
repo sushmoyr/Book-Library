@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.sushmoyr.booklibrary.R
 import com.sushmoyr.booklibrary.database.Book
 import com.sushmoyr.booklibrary.database.BookViewModel
@@ -63,10 +64,19 @@ class ViewFragment : Fragment() {
                 findNavController().navigate(action)
             }
             R.id.delete_item -> {
-                bookViewModel.deleteBook(args.BookData)
-                Toast.makeText(requireContext(), "Successfully Deleted", Toast.LENGTH_SHORT).show()
-                findNavController().navigate(ViewFragmentDirections.actionViewFragmentToHomeFragment())
+                val builder = MaterialAlertDialogBuilder(requireContext())
+                builder.setPositiveButton("Yes") { _, _ ->
+                    bookViewModel.deleteBook(args.BookData)
+                    Toast.makeText(requireContext(), "Successfully Deleted", Toast.LENGTH_SHORT)
+                        .show()
+                    findNavController().navigate(ViewFragmentDirections.actionViewFragmentToHomeFragment())
+                }
+                builder.setNegativeButton("No") { _, _ ->
 
+                }
+                builder.setTitle("Delete Book?")
+                builder.setMessage("Are you sure want to delete this entry? You won't be able to undo this action.")
+                builder.create().show()
             }
         }
 

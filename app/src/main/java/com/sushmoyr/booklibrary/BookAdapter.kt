@@ -2,6 +2,7 @@ package com.sushmoyr.booklibrary
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.sushmoyr.booklibrary.database.Book
@@ -25,6 +26,10 @@ class BookAdapter : RecyclerView.Adapter<BookAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = bookList[position]
+
+        holder.binding.itemRoot.animation =
+            AnimationUtils.loadAnimation(holder.binding.itemRoot.context, R.anim.custom_animation)
+
         holder.binding.bookTitle.text = currentItem.name
         holder.binding.bookAuthor.text = currentItem.author
         holder.binding.bookDesc.text = currentItem.description

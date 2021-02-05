@@ -23,4 +23,5 @@
     <string name="content_desc_img">The Cover Page of the Book</string>
     <string name="delete">Delete</string>
     <string name="edit">Edit</string>
+    <string name="update">Update</string>
 </resources>
