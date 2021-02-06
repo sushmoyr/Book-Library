@@ -22,6 +22,7 @@
     <string name="title_dummy_text">The name of the book is so big that I can\'t handle</string>
     <string name="content_desc_img">The Cover Page of the Book</string>
     <string name="delete">Delete</string>
+    <string name="genre_dummy">Genre: Mystery, Thriller, Adventure</string>
     <string name="edit">Edit</string>
     <string name="update">Update</string>
 </resources>
