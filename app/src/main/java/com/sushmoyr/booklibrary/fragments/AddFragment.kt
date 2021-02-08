@@ -1,9 +1,13 @@
 package com.sushmoyr.booklibrary.fragments
 
+import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.drawToBitmap
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -11,6 +15,8 @@ import com.sushmoyr.booklibrary.R
 import com.sushmoyr.booklibrary.database.Book
 import com.sushmoyr.booklibrary.database.BookViewModel
 import com.sushmoyr.booklibrary.databinding.FragmentAddBinding
+import com.theartofdev.edmodo.cropper.CropImage
+import com.theartofdev.edmodo.cropper.CropImageView
 
 class AddFragment : Fragment() {
 
@@ -34,6 +40,10 @@ class AddFragment : Fragment() {
 
         bookViewModel = ViewModelProvider(this).get(BookViewModel::class.java)
 
+        binding.bookCover.setImageResource(R.drawable.ic_placeholder_image)
+        binding.bookCover.setOnClickListener {
+            pickImage()
+        }
 
         setHasOptionsMenu(true)
         return binding.root
@@ -62,16 +72,17 @@ class AddFragment : Fragment() {
         }
     }
 
-    fun getBookData(): Book {
+    private fun getBookData(): Book {
         var authorName = DEFAULT_AUTHOR_NAME
         var description = DEFAULT_DESCRIPTION
         var price = DEFAULT_PRICE
         var genre = DEFAULT_GENRE
         var quantity: Int = 0
         var bookName: String = ""
+        val bookCover: Bitmap = binding.bookCover.drawToBitmap(Bitmap.Config.ARGB_8888)
         //Book name
         if (TextUtils.isEmpty(binding.bookName.text.toString())) {
-            binding.bookName.setError("Name can't be empty")
+            binding.bookName.error = "Name can't be empty"
             hasError = true
         } else {
             bookName = binding.bookName.text.toString()
@@ -98,7 +109,32 @@ class AddFragment : Fragment() {
                 binding.price.setError("Invalid Format")
         }
 
-        return Book(0, bookName, authorName, description, genre, price, quantity)
+        return Book(0, bookName, authorName, description, genre, price, quantity, bookCover)
+    }
+
+    private fun pickImage() {
+        context?.let {
+            CropImage.activity()
+                .setGuidelines(CropImageView.Guidelines.ON)
+                .setAspectRatio(4, 6)
+                .setFixAspectRatio(true)
+                .setRequestedSize(400, 600, CropImageView.RequestSizeOptions.RESIZE_EXACT)
+                .start(it, this)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            val result = CropImage.getActivityResult(data)
+            if (resultCode == AppCompatActivity.RESULT_OK) {
+                val resultUri = result.uri
+                binding.bookCover.setImageURI(resultUri)
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                val error = result.error
+                Toast.makeText(requireContext(), error.toString(), Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     override fun onDestroyView() {

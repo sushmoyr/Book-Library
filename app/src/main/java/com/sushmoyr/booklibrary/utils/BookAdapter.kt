@@ -1,10 +1,11 @@
-package com.sushmoyr.booklibrary
+package com.sushmoyr.booklibrary.utils
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.sushmoyr.booklibrary.R
 import com.sushmoyr.booklibrary.database.Book
 import com.sushmoyr.booklibrary.databinding.CustomRowBinding
 import com.sushmoyr.booklibrary.fragments.HomeFragmentDirections
@@ -34,6 +35,7 @@ class BookAdapter : RecyclerView.Adapter<BookAdapter.MyViewHolder>() {
         holder.binding.bookAuthor.text = currentItem.author
         holder.binding.bookDesc.text = currentItem.description
         holder.binding.bookGenre.text = currentItem.genre
+        holder.binding.bookCover.setImageBitmap(currentItem.cover)
 
         //CLICK EVENT FOR ITEMS = FROM HOME TO VIEW
         holder.binding.itemRoot.setOnClickListener {

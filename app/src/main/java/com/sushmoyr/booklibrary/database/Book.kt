@@ -1,5 +1,6 @@
 package com.sushmoyr.booklibrary.database
 
+import android.graphics.Bitmap
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -15,5 +16,6 @@ data class Book(
     var description: String,
     var genre: String,
     var price: Double,
-    var quantity: Int
+    var quantity: Int,
+    var cover: Bitmap
 ) : Parcelable

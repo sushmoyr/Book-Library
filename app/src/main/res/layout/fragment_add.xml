@@ -9,15 +9,17 @@
     <ImageView
         android:id="@+id/bookCover"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/dummy_cover"
         android:contentDescription="@string/content_desc_img"
-        android:src="@drawable/ic_placeholder_image"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/book_name_layout"
+        app:layout_constraintHeight_percent="0.25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/book_name_layout"

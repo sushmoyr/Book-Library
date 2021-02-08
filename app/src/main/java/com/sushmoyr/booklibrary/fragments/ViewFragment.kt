@@ -48,6 +48,7 @@ class ViewFragment : Fragment() {
         binding.descView.text = description
         binding.priceView.text = price
         binding.quantityView.text = qty
+        binding.imageView.setImageBitmap(bookData.cover)
     }
 
 

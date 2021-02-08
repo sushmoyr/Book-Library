@@ -9,10 +9,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.sushmoyr.booklibrary.BookAdapter
 import com.sushmoyr.booklibrary.R
 import com.sushmoyr.booklibrary.database.BookViewModel
 import com.sushmoyr.booklibrary.databinding.FragmentHomeBinding
+import com.sushmoyr.booklibrary.utils.BookAdapter
 
 
 class HomeFragment : Fragment(), SearchView.OnQueryTextListener {

@@ -3,20 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_root"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="180dp"
     android:layout_margin="6dp"
     app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="8dp">
 
         <ImageView
             android:id="@+id/book_cover"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/content_desc_img"
             android:scaleType="centerCrop"
+            android:src="@drawable/dummy_cover"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="1"
@@ -25,7 +27,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:layout_constraintWidth_percent="0.3"
-            app:srcCompat="@drawable/ic_placeholder_image" />
+
+            app:layout_constraintDimensionRatio="0.6" />
 
         <TextView
             android:id="@+id/book_genre"
@@ -34,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="24dp"
-            android:text="Genre: Some Genre"
+            android:text="@string/genre_dummy"
             app:layout_constraintBottom_toTopOf="@+id/book_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/book_cover"
@@ -45,7 +48,7 @@
             style="@style/TextAppearance.BookLibrary.Headline5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Book Title"
+            android:text="@string/title_dummy_text"
             app:layout_constraintBottom_toTopOf="@+id/book_author"
             app:layout_constraintEnd_toEndOf="@+id/book_genre"
             app:layout_constraintStart_toStartOf="@+id/book_genre"
@@ -57,7 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
-            android:text="Author Name"
+            android:text="@string/author_dummy_text"
             app:layout_constraintBottom_toTopOf="@+id/book_desc"
             app:layout_constraintEnd_toEndOf="@+id/book_title"
             app:layout_constraintHorizontal_bias="0.0"
