@@ -9,12 +9,11 @@
     <ImageView
         android:id="@+id/bookCover"
         android:layout_width="wrap_content"
-        Image
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/content_desc_img"
         android:src="@drawable/dummy_cover"
-        app:layout_constraintBottom_toBottomOf="@id/book_name_layout"
+        app:layout_constraintBottom_toTopOf="@id/book_name_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHeight_percent="0.25"
@@ -27,6 +26,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/author_name_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
